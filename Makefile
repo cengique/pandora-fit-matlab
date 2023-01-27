@@ -7,17 +7,17 @@ SHELL = /bin/sh
 .SUFFIXES: .c
 
 TARNAME = param_fitter
-VERSION = 1.0b
+VERSION = 1.1b
 
 DIRNAME = $(TARNAME)-$(VERSION)
 
 all: 
 
 dist: 
-	mkdir $(DIRNAME)
-	cp -a \@* $(DIRNAME)
+	mkdir -p $(DIRNAME)/$(TARNAME) # So that "help param_fitter" gives the contents file
+	cp -a \@* $(DIRNAME)/$(TARNAME)
 	cp -a unittest $(DIRNAME)
-	cp -a *.m $(DIRNAME)
+	cp -a *.m $(DIRNAME)/$(TARNAME)
 	cp README.dist $(DIRNAME)/README
 	cp COPYING $(DIRNAME)
 	tar -cz --exclude-vcs --exclude=*~ -f $(DIRNAME).tar.gz $(DIRNAME)
