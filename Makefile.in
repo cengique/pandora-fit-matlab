@@ -18,9 +18,10 @@ dist:
 	cp -a \@* $(DIRNAME)/$(TARNAME)
 	cp -a unittest $(DIRNAME)
 	cp -a *.m $(DIRNAME)/$(TARNAME)
-	cp README.dist $(DIRNAME)/README
+	cp README.md $(DIRNAME)/
 	cp COPYING $(DIRNAME)
 	tar -cz --exclude-vcs --exclude=*~ -f $(DIRNAME).tar.gz $(DIRNAME)
+	zip -r $(DIRNAME).zip $(DIRNAME)
 	rm -rf $(DIRNAME)
 
 distclean:

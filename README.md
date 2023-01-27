@@ -18,7 +18,9 @@ Installation:
 Use the addpath Matlab command to add the pandora/ subdirectory to the
 Matlab search path. For example: 
 
+```matlab
 >> addpath my/download/dir/param_fitter-x.y.z/param_fitter
+```
 
 To avoid doing this every time you start Matlab in Windows, use the
 'File->Set path' menu option and add the pandora/ directory to the
