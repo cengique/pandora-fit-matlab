@@ -11,6 +11,8 @@ Prerequisites
 --------------------
 
 - [Pandora Toolbox](https://github.com/cengique/pandora-matlab)
+- Matlab Optimization Toolbox is used by default, but other methods
+  can be substituted
 
 Installation:
 --------------------
