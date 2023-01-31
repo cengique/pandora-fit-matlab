@@ -1,16 +1,19 @@
-param_fitter
-====================
+pan_fit - Pandora Matlab toolbox module for fitting neuronal models
+=======================================================================
 
-param_fitter is an object-oriented Matlab toolbox for fitting
+pan_fit is an object-oriented Matlab toolbox for fitting
 parameters of Hodgkin-Huxley type ion channel and neuron model
 parameters. It achieves this by simulating model ODEs and calculating
 differences to an observed waveform output. It can simulate any ODE or
 simple functions as well. 
 
+[![View pan_fit on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/124050-pan_fit)
+
 Prerequisites
 --------------------
 
-- [Pandora Toolbox](https://github.com/cengique/pandora-matlab)
+- Pandora Toolbox - Get from [Github](https://github.com/cengique/pandora-matlab) or [Mathworks 
+  FileExchange](https://www.mathworks.com/matlabcentral/fileexchange/60237-cengique-pandora-matlab)
 - Matlab Optimization Toolbox is used by default, but other methods
   can be substituted
 
@@ -21,7 +24,7 @@ Use the addpath Matlab command to add the pandora/ subdirectory to the
 Matlab search path. For example: 
 
 ```matlab
->> addpath my/download/dir/param_fitter-x.y.z/param_fitter
+>> addpath my/download/dir/pandora-fit-matlab-x.y.z/pan_fit
 ```
 
 To avoid doing this every time you start Matlab in Windows, use the

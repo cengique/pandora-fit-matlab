@@ -6,18 +6,20 @@ SHELL = /bin/sh
 .SUFFIXES:
 .SUFFIXES: .c
 
+PACKAGE = @PACKAGE_NAME@
 TARNAME = @PACKAGE_TARNAME@
 VERSION = @PACKAGE_VERSION@
 
 DIRNAME = $(TARNAME)-$(VERSION)
+SRCDIR  = $(DIRNAME)/$(PACKAGE)
 
 all: 
 
 dist: 
-	mkdir -p $(DIRNAME)/$(TARNAME) # So that "help param_fitter" gives the contents file
-	cp -a \@* $(DIRNAME)/$(TARNAME)
+	mkdir -p $(SRCDIR) # So that "help pan_fit" gives the contents file
+	cp -a \@* $(SRCDIR)/
 	cp -a unittest $(DIRNAME)
-	cp -a *.m $(DIRNAME)/$(TARNAME)
+	cp -a *.m $(SRCDIR)/
 	cp README.md $(DIRNAME)/
 	cp COPYING $(DIRNAME)
 	tar -cz --exclude-vcs --exclude=*~ -f $(DIRNAME).tar.gz $(DIRNAME)

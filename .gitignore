@@ -8,3 +8,5 @@ autom4te.cache/
 # dist files
 param_fitter*.tar.gz
 param_fitter*.zip
+pandora-fit-matlab-*.tar.gz
+pandora-fit-matlab-*.zip

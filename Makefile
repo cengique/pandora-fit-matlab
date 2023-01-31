@@ -6,18 +6,22 @@ SHELL = /bin/sh
 .SUFFIXES:
 .SUFFIXES: .c
 
-TARNAME = param_fitter
+PACKAGE = pan_fit
+TARNAME = pandora-fit-matlab
 VERSION = 1.1b
 
 DIRNAME = $(TARNAME)-$(VERSION)
 
+# So that "help pan_fit" gives the contents file
+SRCDIR  = $(DIRNAME)/$(PACKAGE)
+
 all: 
 
 dist: 
-	mkdir -p $(DIRNAME)/$(TARNAME) # So that "help param_fitter" gives the contents file
-	cp -a \@* $(DIRNAME)/$(TARNAME)
+	mkdir -p $(SRCDIR) 
+	cp -a \@* $(SRCDIR)
 	cp -a unittest $(DIRNAME)
-	cp -a *.m $(DIRNAME)/$(TARNAME)
+	cp -a *.m $(SRCDIR)/
 	cp README.md $(DIRNAME)/
 	cp COPYING $(DIRNAME)
 	tar -cz --exclude-vcs --exclude=*~ -f $(DIRNAME).tar.gz $(DIRNAME)
