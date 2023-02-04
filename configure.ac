@@ -9,7 +9,7 @@
 # Basic stuff
 AC_REVISION([$Revision: 8 $])
 AC_PREREQ(2.60)
-AC_INIT(pan_fit, 1.1b, [cengique@users.sf.net], pandora-fit-matlab)
+AC_INIT(pan_fit, 1.1, [cengique@users.sf.net], pandora-fit-matlab)
 
 AC_CONFIG_FILES([Makefile])
 

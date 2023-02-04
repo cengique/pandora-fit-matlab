@@ -20,7 +20,7 @@ Prerequisites
 Installation:
 --------------------
 
-Use the addpath Matlab command to add the pandora/ subdirectory to the
+Use the addpath Matlab command to add the pan_fit/ subdirectory to the
 Matlab search path. For example: 
 
 ```matlab
